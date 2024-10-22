@@ -81,46 +81,52 @@ const TaskManager = () => {
 
   return (
     <>
-    <ThemeToggle />
-    <div className="container">
-      <Notification message={notification.message} visible={notification.visible} />
-      <h1 className="title">Task Manager</h1>
-      
-      <EditTask
-        title={title}
-        onTitleChange={setTitle}
-        onSubmit={editMode ? confirmEdit : handleAddTask}
-        isEditing={editMode}
-      />
+      <ThemeToggle />
+      <div className="container">
+        <Notification message={notification.message} visible={notification.visible} />
+        <h1 className="title">Task Manager</h1>
+        
+        <EditTask
+          title={title}
+          onTitleChange={setTitle}
+          onSubmit={editMode ? confirmEdit : handleAddTask}
+          isEditing={editMode}
+        />
 
-      <input
-        type="text"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder="Search tasks..."
-        className="input"
-      />
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search tasks..."
+          className="input"
+        />
 
-      <ul>
-        {filteredTasks.map(task => (
-          <li key={task.id} className="task">
-                    <span
-            className={`task-title ${task.completed ? "completed" : "incomplete"}`}
-            onClick={() => handleUpdateTask(task)}
-          >
-            {task.title}
-          </span>
-            <button
-              onClick={() => handleEdit(task)}  
-              className="edit-button"
-            >
-              Edit
-            </button>
-            <DeleteTask onDelete={() => handleDeleteTask(task.id)} />
-          </li>
-        ))}
-      </ul>
-    </div>
+        <ul>
+          {filteredTasks.map(task => (
+            <li key={task.id} className="task">
+              <span
+                className={`task-title ${task.completed ? "completed" : "incomplete"}`}
+                onClick={() => handleUpdateTask(task)}
+              >
+                {task.title}
+              </span>
+              <button
+                onClick={() => handleEdit(task)}  
+                className="edit-button"
+              >
+                Edit
+              </button>
+              <DeleteTask onDelete={() => handleDeleteTask(task.id)} />
+
+              {/* Displaying createdAt and updatedAt */}
+              <div className="task-dates">
+                <span>Created: {new Date(task.createdAt).toLocaleString()}</span>
+                <span>Updated: {new Date(task.updatedAt).toLocaleString()}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };

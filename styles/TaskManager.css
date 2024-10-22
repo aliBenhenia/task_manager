@@ -1,3 +1,4 @@
+/* Theme Toggle */
 .theme-toggle {
   background: transparent;
   border: none;
@@ -13,15 +14,17 @@
   transform: scale(1.1);
 }
 
+/* Container */
 .container {
   padding: 20px;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: center; 
-  height: 100vh; 
+  align-items: center;
+  height: 100vh;
 }
 
+/* Title */
 .title {
   font-size: 24px;
   font-weight: bold;
@@ -34,18 +37,19 @@
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  .title {
-      font-size: 20px;
-  }
-}
-
 .title:hover {
   color: var(--primary-color);
   cursor: pointer;
   transform: scale(1.05);
 }
 
+@media (max-width: 600px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+/* Input */
 .input {
   border: 1px solid var(--border-color);
   background-color: var(--task-background);
@@ -61,6 +65,7 @@
   box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
 }
 
+/* Button */
 .button {
   background-color: var(--primary-color);
   color: white;
@@ -79,6 +84,7 @@
   transform: scale(1.05);
 }
 
+/* Task */
 .task {
   display: flex;
   justify-content: space-between;
@@ -94,70 +100,89 @@
   min-width: 200px;
 }
 
-@media (max-width: 600px) {
-  .task {
-      width: 100%;
-  }
-}
-
 .task:hover {
   background-color: var(--task-background-hover);
   transform: translateY(-2px);
 }
 
+@media (max-width: 600px) {
+  .task {
+    width: 100%;
+  }
+}
+
+/* Task Title */
+.task-title {
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
+  border: 2px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.task-title:hover {
+  color: var(--task-title-hover-color);
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--task-title-hover-color);
+}
+
+.task-title.completed {
+  color: var(--completed-title-color);
+  text-decoration: line-through;
+}
+
+.task-title.incomplete {
+  color: var(--incomplete-title-color);
+}
+
+/* Task Dates */
+.task-dates {
+  font-size: 12px;
+  color: var(--secondary-text-color);
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.task-dates span {
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.task-dates span:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Edit and Delete Buttons */
+.edit-button,
 .delete-button {
-  background-color: var(--error-color);
-  color: white;
   padding: 5px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
   width: 100%;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.edit-button {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: var(--secondary-color-hover);
+  transform: scale(1.05);
+}
+
+.delete-button {
+  background-color: var(--error-color);
+  color: white;
 }
 
 .delete-button:hover {
   background-color: var(--error-color-hover);
   transform: scale(1.05);
-}
-
-.edit-button {
-  background-color: var(--secondary-color); 
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
-  width: 100%;
-}
-
-.edit-button:hover {
-  background-color: var(--secondary-color-hover);  
-  transform: scale(1.05);
-}
-
-.task-title {
-  display: inline-block; /* Ensure it can have padding and margins */
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
-  border: 2px solid #ddd; /* Default border */
-  padding: 10px 15px; /* Add padding for better spacing */
-  border-radius: 8px; /* Rounded corners */
-}
-
-.task-title:hover {
-  color: var(--task-title-hover-color); 
-  transform: scale(1.05); 
-  background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
-  border-color: var(--task-title-hover-color); /* Change border color on hover */
-}
-
-.task-title.completed {
-  color: var(--completed-title-color); 
-  text-decoration: line-through; 
-}
-
-.task-title.incomplete {
-  color: var(--incomplete-title-color); 
 }
