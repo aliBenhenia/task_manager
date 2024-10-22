@@ -1,12 +1,7 @@
-// components/EditTask.tsx
-import React from 'react';
 
-interface EditTaskProps {
-  title: string;
-  onTitleChange: (title: string) => void;
-  onSubmit: (e: React.FormEvent) => void;
-  isEditing: boolean;
-}
+import React from 'react';
+import { EditTaskProps } from '../interfaces/interfaces';
+
 
 const EditTask: React.FC<EditTaskProps> = ({ title, onTitleChange, onSubmit, isEditing }) => {
   return (

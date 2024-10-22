@@ -1,9 +1,6 @@
-// components/DeleteTask.tsx
-import React from 'react';
 
-interface DeleteTaskProps {
-  onDelete: () => void;
-}
+import React from 'react';
+import { DeleteTaskProps } from '../interfaces/interfaces';
 
 const DeleteTask: React.FC<DeleteTaskProps> = ({ onDelete }) => {
   return (

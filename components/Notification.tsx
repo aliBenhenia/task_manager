@@ -1,11 +1,7 @@
-// components/Notification.tsx
-import React from 'react';
-import './Notification.css'; // Import the CSS file
 
-interface NotificationProps {
-  message: string;
-  visible: boolean;
-}
+import React from 'react';
+import './Notification.css'; 
+import { NotificationProps } from '../interfaces/interfaces';
 
 const Notification: React.FC<NotificationProps> = ({ message, visible }) => {
   return (
