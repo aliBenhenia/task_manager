@@ -7,10 +7,10 @@ services:
     volumes:
       - .:/app  
       - ./db:/app/db  
-    command: sh -c "npm install && npx prisma migrate dev && npm run dev"  
+    command: sh -c "npm install && npx prisma migrate dev && npm run dev"   
     ports:
-      - "3000:3000"  
+      - "3000:3000"   
     environment:
-      DATABASE_URL: "file:./db/dev.db"  
+      DATABASE_URL: "file:./db/dev.db"    
 
 
