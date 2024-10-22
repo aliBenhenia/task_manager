@@ -23,14 +23,14 @@
 }
 
 body {
-  background-color: #A3B18A; /* Light mode background */
-  color: #000000; /* Light mode text color */
+  background-color: #A3B18A; 
+  color: #000000; 
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark {
-  background-color: #1a1a1a; /* Dark mode background */
-  color: #ffffff; /* Dark mode text color */
+  background-color: #1a1a1a; 
+  color: #ffffff; 
 }
 
 .theme-toggle {
@@ -49,9 +49,9 @@ body.dark {
 }
 
 .container {
-  display: flex; /* Enable Flexbox */
+  display: flex; 
   flex-direction: column;
   gap: 15px;
   align-items: center; 
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
 }
