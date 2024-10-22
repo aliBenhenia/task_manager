@@ -84,7 +84,7 @@ const TaskManager = () => {
       <ThemeToggle />
       <div className="container">
         <Notification message={notification.message} visible={notification.visible} />
-        <h1 className="title">Task Manager</h1>
+        <h1 className="title">Task Manager </h1>
         
         <EditTask
           title={title}

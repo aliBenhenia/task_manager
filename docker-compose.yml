@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    image: node:20.6.1-alpine  
+    working_dir: /app
+    volumes:
+      - .:/app  
+      - ./db:/app/db  
+    command: sh -c "npm install && npx prisma migrate dev && npm run dev"  
+    ports:
+      - "3000:3000"  
+    environment:
+      DATABASE_URL: "file:./db/dev.db"  
+
+
