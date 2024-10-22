@@ -1,13 +1,12 @@
-// components/TaskManager.tsx
+
 "use client";
 
 import { useEffect, useState } from "react";
-import './TaskManager.css'; 
+import '../styles/TaskManager.css'; 
 import EditTask from './EditTask';  
 import DeleteTask from './DeleteTask';  
 import Notification from './Notification';  
 import { Task } from "../interfaces/interfaces";
-import { Button } from "antd";
 const TaskManager = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [title, setTitle] = useState("");

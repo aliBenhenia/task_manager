@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './Notification.css'; 
+import "../styles/notification.css"
 import { NotificationProps } from '../interfaces/interfaces';
 
 const Notification: React.FC<NotificationProps> = ({ message, visible }) => {
