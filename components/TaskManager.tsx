@@ -101,12 +101,12 @@ const TaskManager = () => {
       <ul>
         {filteredTasks.map(task => (
           <li key={task.id} className="task">
-            <span
-              className={`cursor-pointer ${task.completed ? "line-through text-gray-400" : "text-white"}`}
-              onClick={() => handleUpdateTask(task)}
-            >
-              {task.title}
-            </span>
+                    <span
+            className={`task-title ${task.completed ? "completed" : "incomplete"}`}
+            onClick={() => handleUpdateTask(task)}
+          >
+            {task.title}
+          </span>
             <button
               onClick={() => handleEdit(task)}  
               className="edit-button"

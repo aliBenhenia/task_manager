@@ -1,19 +1,19 @@
-/* components/Notification.css */
+
 .notification {
     position: fixed;
-    top: 20px; /* Space from the top */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center adjustment */
-    padding: 16px 24px; /* Padding for the notification */
-    background-color: #38a169; /* Green background */
-    color: white; /* Text color */
-    border-radius: 5px; /* Rounded corners */
-    z-index: 1000; /* Ensure it is on top */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 16px 24px; 
+    background-color: #38a169; 
+    color: white; 
+    border-radius: 5px; 
+    z-index: 1000; 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
   }
   
   .notification.visible {
-    opacity: 1; /* Make it visible when the class is added */
+    opacity: 1; 
   }
   
