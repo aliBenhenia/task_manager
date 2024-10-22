@@ -3,6 +3,8 @@
 
 import { useEffect, useState } from "react";
 import './TaskManager.css'; // Import the CSS file
+import EditTask from './EditTask'; // Import EditTask component
+import DeleteTask from './DeleteTask'; // Import DeleteTask component
 
 interface Task {
   id: number;
@@ -93,19 +95,12 @@ const TaskManager = () => {
     <div className="container">
       <h1 className="title">Task Manager</h1>
       
-      <form onSubmit={editMode ? confirmEdit : addTask} className="flex mb-4">
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder={editMode ? "Edit task..." : "New task..."}
-          className="input"
-          required
-        />
-        <button type="submit" className="button">
-          {editMode ? "Update" : "Add"}
-        </button>
-      </form>
+      <EditTask
+        title={title}
+        onTitleChange={setTitle}
+        onSubmit={editMode ? confirmEdit : addTask}
+        isEditing={editMode}
+      />
 
       <input
         type="text"
@@ -130,12 +125,7 @@ const TaskManager = () => {
             >
               Edit
             </button>
-            <button
-              onClick={() => deleteTask(task.id)}
-              className="delete-button"
-            >
-              Delete
-            </button>
+            <DeleteTask onDelete={() => deleteTask(task.id)} />
           </li>
         ))}
       </ul>
