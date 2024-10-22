@@ -1,30 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ddd; /* Light mode background */
+  color: #000000; /* Light mode text color */
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* styles/TaskManager.css */
+body.dark {
+  background-color: #1a1a1a; /* Dark mode background */
+  color: #ffffff; /* Dark mode text color */
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
 .container {
   display: flex; /* Enable Flexbox */
   flex-direction: column;
   gap: 15px;
-
   align-items: center; 
   height: 100vh; /* Full viewport height */
 }

@@ -7,6 +7,7 @@ import DeleteTask from './DeleteTask';
 import Notification from './Notification';  
 import { Task } from "../interfaces/interfaces";
 import { fetchTasks, addTask, updateTask, deleteTask } from "../services/taskService";
+import ThemeToggle from "./ThemeToggle";
 
 const TaskManager = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -79,6 +80,8 @@ const TaskManager = () => {
   );
 
   return (
+    <>
+    <ThemeToggle />
     <div className="container">
       <Notification message={notification.message} visible={notification.visible} />
       <h1 className="title">Task Manager</h1>
@@ -118,6 +121,7 @@ const TaskManager = () => {
         ))}
       </ul>
     </div>
+    </>
   );
 };
 
