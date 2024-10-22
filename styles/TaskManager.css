@@ -1,5 +1,5 @@
 .container {
-  background-color: #1a1a1a;
+  background-color: #121212;
   color: white;
   padding: 20px;
 }
@@ -8,7 +8,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 16px;
-  color: #333;
+  color: #e0e0e0;
   text-align: center;
   line-height: 1.5;
   text-transform: uppercase;
@@ -23,14 +23,14 @@
 }
 
 .title:hover {
-  color: #007BFF;
+  color: #009688;
   cursor: pointer;
   transform: scale(1.05);
 }
 
 .input {
-  border: 1px solid #333;
-  background-color: #222;
+  border: 1px solid #4a4a4a;
+  background-color: #1f1f1f;
   padding: 10px;
   margin-right: 10px;
   border-radius: 4px;
@@ -39,22 +39,25 @@
 
 .input:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-color: #009688;
+  box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
 }
 
 .button {
-  background-color: #007bff;
+  background-color: #009688;
   color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
+  display: block;
+  width: 189px;
+  margin-top: 10px;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #00796b;
   transform: scale(1.05);
 }
 
@@ -66,7 +69,7 @@
   gap: 10px;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #333;
+  background-color: #1f1f1f;
   border-radius: 4px;
   transition: background-color 0.2s, transform 0.2s;
   width: 444px;
@@ -80,12 +83,12 @@
 }
 
 .task:hover {
-  background-color: #444;
+  background-color: #2a2a2a;
   transform: translateY(-2px);
 }
 
 .delete-button {
-  background-color: #dc3545;
+  background-color: #f44336;
   color: white;
   padding: 5px 10px;
   border: none;
@@ -96,12 +99,12 @@
 }
 
 .delete-button:hover {
-  background-color: #c82333;
+  background-color: #d32f2f;
   transform: scale(1.05);
 }
 
 .edit-button {
-  background-color: #28a745; 
+  background-color: #4caf50; 
   color: white;
   padding: 5px 10px;
   border: none;
@@ -112,7 +115,7 @@
 }
 
 .edit-button:hover {
-  background-color: #218838;  
+  background-color: #388e3c;  
   transform: scale(1.05);
 }
 
@@ -122,7 +125,7 @@
 }
 
 .task-title:hover {
-  color: #00aaff; 
+  color: #00acc1; 
   transform: scale(1.05); 
 }
 
@@ -132,5 +135,5 @@
 }
 
 .task-title.incomplete {
-  color: #fff; 
+  color: #ffffff; 
 }
