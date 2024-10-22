@@ -1,37 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Full-Stack CRUD Application
 
-## Getting Started
+## 🌟 Overview
 
-First, run the development server:
+Welcome to my **Full-Stack CRUD Application**! This project showcases my ability to build a complete web application using **Next.js**, **TypeScript**, **Prisma**, and **SQLite**, all containerized with **Docker**. It allows users to create, read, update, and delete entries with ease.
+
+## 🚀 Key Features
+
+- **Easy to Use**: Intuitive interface for managing entries.
+- **Responsive Design**: Looks great on all devices.
+- **Docker Ready**: Just run and go!
+
+## 🛠️ Technologies
+
+- **Next.js**: Framework for building server-rendered React applications.
+- **TypeScript**: Enhances JavaScript with type safety.
+- **Prisma**: Simplifies database interactions.
+- **SQLite**: Lightweight relational database.
+- **Docker**: Ensures consistent environment across machines.
+
+## 💻 Getting Started
+
+### Prerequisites
+
+- [Docker](https://www.docker.com/get-started) installed on your machine.
+
+### Clone the Repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/aliBenhenia/task_manager
+cd task_manager
+```
+### run the app
+
+
+```bash
+    docker-compose up --build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# task_manager
+## Assignment Value
+Completing this assignment not only enhances my practical skills in full-stack development but also reinforces my understanding of:
+- **Building scalable applications** with Next.js and TypeScript.
+- **Utilizing Prisma** for efficient database management.
+- **Implementing containerization** with Docker for easy deployment.
+- **Understanding CRUD operations** and their significance in web applications.
