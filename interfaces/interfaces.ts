@@ -19,3 +19,12 @@ export interface NotificationProps {
   message: string;
   visible: boolean;
 }
+
+export interface ThemeContextType {
+  darkMode: boolean;
+  toggleTheme: () => void;
+}
+
+export interface ErrorProps {
+  error: Error;
+}

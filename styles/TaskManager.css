@@ -1,12 +1,32 @@
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
 .container {
   padding: 20px;
+  display: flex; /* Enable Flexbox */
+  flex-direction: column;
+  gap: 15px;
+  align-items: center; 
+  height: 100vh; /* Full viewport height */
 }
 
 .title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 16px;
-  color: #e0e0e0;
+  color: var(--title-color);
   text-align: center;
   line-height: 1.5;
   text-transform: uppercase;
@@ -21,14 +41,14 @@
 }
 
 .title:hover {
-  color: #009688;
+  color: var(--primary-color);
   cursor: pointer;
   transform: scale(1.05);
 }
 
 .input {
-  border: 1px solid #4a4a4a;
-  background-color: #1f1f1f;
+  border: 1px solid var(--border-color);
+  background-color: var(--task-background);
   padding: 10px;
   margin-right: 10px;
   border-radius: 4px;
@@ -37,12 +57,12 @@
 
 .input:focus {
   outline: none;
-  border-color: #009688;
+  border-color: var(--primary-color);
   box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
 }
 
 .button {
-  background-color: #009688;
+  background-color: var(--primary-color);
   color: white;
   padding: 10px 15px;
   border: none;
@@ -55,7 +75,7 @@
 }
 
 .button:hover {
-  background-color: #00796b;
+  background-color: var(--primary-color-hover);
   transform: scale(1.05);
 }
 
@@ -67,7 +87,7 @@
   gap: 10px;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #1f1f1f;
+  background-color: var(--task-background);
   border-radius: 4px;
   transition: background-color 0.2s, transform 0.2s;
   width: 444px;
@@ -81,12 +101,12 @@
 }
 
 .task:hover {
-  background-color: #2a2a2a;
+  background-color: var(--task-background-hover);
   transform: translateY(-2px);
 }
 
 .delete-button {
-  background-color: #f44336;
+  background-color: var(--error-color);
   color: white;
   padding: 5px 10px;
   border: none;
@@ -97,12 +117,12 @@
 }
 
 .delete-button:hover {
-  background-color: #d32f2f;
+  background-color: var(--error-color-hover);
   transform: scale(1.05);
 }
 
 .edit-button {
-  background-color: #4caf50; 
+  background-color: var(--secondary-color); 
   color: white;
   padding: 5px 10px;
   border: none;
@@ -113,7 +133,7 @@
 }
 
 .edit-button:hover {
-  background-color: #388e3c;  
+  background-color: var(--secondary-color-hover);  
   transform: scale(1.05);
 }
 
@@ -123,15 +143,15 @@
 }
 
 .task-title:hover {
-  color: #00acc1; 
+  color: var(--task-title-hover-color); 
   transform: scale(1.05); 
 }
 
 .task-title.completed {
-  color: #bbb; 
+  color: var(--completed-title-color); 
   text-decoration: line-through; 
 }
 
 .task-title.incomplete {
-  color: #ffffff; 
+  color: var(--incomplete-title-color); 
 }

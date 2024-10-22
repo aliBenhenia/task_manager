@@ -2,8 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background-color-light: #f5f5f5;
+  --background-color-dark: #1a1a1a;
+  --text-color-light: #000000;
+  --text-color-dark: #ffffff;
+  --primary-color: #009688;
+  --primary-color-hover: #00796b;
+  --secondary-color: #4caf50;
+  --secondary-color-hover: #388e3c;
+  --error-color: #f44336;
+  --error-color-hover: #d32f2f;
+  --border-color: #4a4a4a;
+  --task-background: #1f1f1f;
+  --task-background-hover: #2a2a2a;
+  --title-color: #e0e0e0;
+  --completed-title-color: #bbb;
+  --incomplete-title-color: #ffffff;
+  --task-title-hover-color: #00acc1;
+}
+
 body {
-  background-color: #ddd; /* Light mode background */
+  background-color: #A3B18A; /* Light mode background */
   color: #000000; /* Light mode text color */
   transition: background-color 0.3s, color 0.3s;
 }
