@@ -118,7 +118,6 @@ const TaskManager = () => {
               </button>
               <DeleteTask onDelete={() => handleDeleteTask(task.id)} />
 
-              {/* Displaying createdAt and updatedAt */}
               <div className="task-dates">
                 <span>Created: {new Date(task.createdAt).toLocaleString()}</span>
                 <span>Updated: {new Date(task.updatedAt).toLocaleString()}</span>
